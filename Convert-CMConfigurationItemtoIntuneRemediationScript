@@ -104,7 +104,7 @@ function Convert-CMConfigurationItemtoIntuneRemediationScript {
                 $settingdatatypeName = switch ($setting.settingdataType.Name) {
                     "Int64" { "DWORD" }
                     "String" { "STRING" }
-                    "StringArray" { "MULTI_STRING" }
+                    "StringArray" { "MULTISTRING" }
                     default { $setting.settingdataType.Name }
                 }
 
