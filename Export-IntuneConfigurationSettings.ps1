@@ -29,9 +29,9 @@ Function Export-IntuneConfigurationSettings {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory = $True,
-            HelpMessage = "Choose from the following: All, windowsCloudN, windows11SE, iotEnterpriseSEval, windowsCPC, windowsEnterprise, windowsProfessional, windowsEducation, holographicForBusiness, windowsMultiSession, iotEnterprise")]
-        [ValidateSet('All', 'windowsCloudN', 'windows11SE', 'windows11SE', 'iotEnterpriseSEval', 'windowsCPC', 'windowsEnterprise', 'windowsProfessional', 'windowsEducation', 'holographicForBusiness', 'windowsMultiSession', 'iotEnterprise')]
-        [string]$Scope
+            HelpMessage = "Choose from the following: All, windowsCloudN, windows11SE, iotEnterpriseSEval, windowsCPC, windowsEnterprise, windowsProfessional, windowsEducation, hololens, hololensEnterprise, holographicForBusiness, windowsMultiSession, iotEnterprise, windowsHome, surfaceHub, unknown")]
+        [ValidateSet('All', 'windowsCloudN', 'windows11SE', 'windows11SE', 'iotEnterpriseSEval', 'windowsCPC', 'windowsEnterprise', 'windowsProfessional', 'windowsEducation', 'hololens', 'hololensEnterprise', 'holographicforBuiness', 'windowsMultiSession', 'iotEnterprise', 'windowsHome', 'surfaceHub', 'unknown')]
+        [string]$WindowsSku
     )
 
     # Microsoft Graph Connection check
@@ -50,7 +50,7 @@ Function Export-IntuneConfigurationSettings {
     #endregion
 
     #region Gather the settings
-    Switch ($Scope) {
+    Switch ($WindowsSku) {
         "All" {
             $uri = "https://graph.microsoft.com/beta/deviceManagement/configurationSettings"
             $Settings = (Invoke-MGGraphRequest -Method Get -Uri $uri).value
