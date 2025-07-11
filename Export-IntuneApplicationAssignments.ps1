@@ -1,4 +1,4 @@
-function Export-g46IntuneApplicationAssignments {
+function Export-IntuneApplicationAssignments {
     <#
     .SYNOPSIS
     Export Intune mobile app assignments, group targeting, and filters to a CSV.
