@@ -1,7 +1,33 @@
 function Export-IntuneApplicationAssignments {
     <#
     .SYNOPSIS
-    Export Intune mobile app assignments, group targeting, and filters to a CSV.
+    Exports Microsoft Intune mobile app assignment details to a CSV file.
+
+    .DESCRIPTION
+    This function connects to Microsoft Graph and retrieves details about mobile applications 
+    and their assignment configurations in Intune. It includes platform type, app metadata, 
+    group targeting, filter usage, and assignment intent.
+
+    .PARAMETER OutputDir
+    Optional. The directory path where the CSV file will be saved. Defaults to the current working directory.
+
+    .NOTES
+    Requires:
+      - Microsoft.Graph PowerShell SDK (e.g., Invoke-MgGraphRequest, Get-MgContext)
+      - Delegated Graph permissions to read device app management and group details
+
+    .EXAMPLE
+    Export-IntuneApplicationAssignments
+    Prompts for delegated Graph connection and outputs the CSV to the current folder.
+
+    .OUTPUTS
+    A CSV file containing assignment details with columns:
+    Platform, ID, DisplayName, InformationURL, DateCreated,
+    VPPTokenOrganizationName, TotalLicenseCount, UsedLicenseCount,
+    GroupId, GroupName, FilterType, FilterId, FilterName, AssignmentIntent
+
+    .LINK
+    https://learn.microsoft.com/en-us/powershell/microsoftgraph/overview
     #>
 
     # Check Graph connection
