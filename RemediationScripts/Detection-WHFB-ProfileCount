@@ -12,13 +12,9 @@ $userProfiles = Get-WmiObject -Class Win32_UserProfile | Where-Object {
 # Check profile count
 if ($userProfiles.count -le 10) {
    Write-Output "Compliant: Less than 10 profiles found, $($userProfiles.count) total profiles found."
-   Write-Output "Profiles found:"
-   $userProfiles | ForEach-Object { Write-Output $_.LocalPath.Split('\')[-1] }
    Exit 1
 } 
 else {
    Write-Output "Non-Compliant: More than 10 profiles found, $($userProfiles.count) total profiles found."
-   Write-Output "Profiles found:"
-   $userProfiles | ForEach-Object { Write-Output $_.LocalPath.Split('\')[-1] }
    Exit 0
 }
