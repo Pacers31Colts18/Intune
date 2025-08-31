@@ -19,4 +19,7 @@ if ($userSids -lt "10"){
 Write-Output "Compliant, WHFB Users Enrolled = $usersids"
 Exit 0
 }
-
+if ($null -eq $userSids){
+    Write-Output "Not Compliant, No WHFB users enrolled"
+    Exit 0
+}
