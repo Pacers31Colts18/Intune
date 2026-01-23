@@ -1,0 +1,21 @@
+{
+  "name": "ALL_W11_D_CISL1_CompAdministrativeTemplates_DoNotAllowDriveRedirection_PROD",
+  "description": "(L1) Ensure 'Do not allow drive redirection' is set to 'Enabled'\n",
+  "platforms": "windows10",
+  "technologies": "mdm",
+  "settings": [
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_remotedesktopservices_donotallowdriveredirection",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_remotedesktopservices_donotallowdriveredirection_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    }
+  ]
+}

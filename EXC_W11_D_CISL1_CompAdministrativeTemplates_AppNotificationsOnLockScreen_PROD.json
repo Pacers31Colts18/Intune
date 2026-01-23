@@ -1,0 +1,21 @@
+{
+  "name": "EXC_W11_D_CISL1_CompAdministrativeTemplates_AppNotificationsOnLockScreen_PROD",
+  "description": "(L1) Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled'\n",
+  "platforms": "windows10",
+  "technologies": "mdm",
+  "settings": [
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_windowslogon_disablelockscreenappnotifications",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_windowslogon_disablelockscreenappnotifications_0",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    }
+  ]
+}

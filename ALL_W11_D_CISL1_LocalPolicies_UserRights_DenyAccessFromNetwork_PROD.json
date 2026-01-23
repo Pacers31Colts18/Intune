@@ -1,0 +1,28 @@
+{
+  "name": "ALL_W11_D_CISL1_LocalPolicies_UserRights_DenyAccessFromNetwork_PROD",
+  "description": "(L1) Ensure 'Deny access to this computer from the network' to include 'Guests, Local account'\n",
+  "platforms": "windows10",
+  "technologies": "mdm",
+  "settings": [
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_denyaccessfromnetwork",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Guests",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          },
+          {
+            "value": "Local account",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    }
+  ]
+}

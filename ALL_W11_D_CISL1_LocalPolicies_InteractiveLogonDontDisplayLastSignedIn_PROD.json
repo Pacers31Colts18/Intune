@@ -1,0 +1,21 @@
+{
+  "name": "ALL_W11_D_CISL1_LocalPolicies_InteractiveLogonDontDisplayLastSignedIn_PROD",
+  "description": "(L1) Ensure 'Interactive logon: Don't display last signed-in' is set to 'Enabled'\n",
+  "platforms": "windows10",
+  "technologies": "mdm",
+  "settings": [
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_interactivelogon_donotdisplaylastsignedin",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_interactivelogon_donotdisplaylastsignedin_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    }
+  ]
+}

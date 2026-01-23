@@ -1,0 +1,170 @@
+{
+  "name": "ALL_WIN_D_OSConfig_WindowsHelloforBusiness_TEST",
+  "description": "",
+  "platforms": "windows10",
+  "technologies": "mdm",
+  "templateReference": {
+    "templateId": "fcef01f2-439d-4c3f-9184-823fd6e97646_1"
+  },
+  "settings": [
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_passportforwork_biometrics_facialfeaturesuseenhancedantispoofing",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "settingValueTemplateReference": {
+            "settingValueTemplateId": "93a7ef59-584d-4177-ac5a-2ca31d47e179",
+            "useTemplateDefault": false
+          },
+          "value": "device_vendor_msft_passportforwork_biometrics_facialfeaturesuseenhancedantispoofing_true",
+          "children": []
+        },
+        "settingInstanceTemplateReference": {
+          "settingInstanceTemplateId": "9a29ce6b-fae8-4785-bbfe-3311f14aa88f"
+        }
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_passportforwork_{tenantid}",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance",
+        "groupSettingCollectionValue": [
+          {
+            "settingValueTemplateReference": null,
+            "children": [
+              {
+                "settingDefinitionId": "device_vendor_msft_passportforwork_{tenantid}_policies_enablepinrecovery",
+                "auditRuleInformation": null,
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "choiceSettingValue": {
+                  "settingValueTemplateReference": {
+                    "settingValueTemplateId": "06ebb101-6342-4081-b208-87a13151afa5",
+                    "useTemplateDefault": false
+                  },
+                  "value": "device_vendor_msft_passportforwork_{tenantid}_policies_enablepinrecovery_true",
+                  "children": []
+                },
+                "settingInstanceTemplateReference": {
+                  "settingInstanceTemplateId": "f7ac8ff7-1b26-469b-9872-00d68961fdc5"
+                }
+              },
+              {
+                "settingDefinitionId": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_minimumpinlength",
+                "auditRuleInformation": null,
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+                "simpleSettingValue": {
+                  "settingValueTemplateReference": {
+                    "settingValueTemplateId": "b2cec844-c747-466e-ae20-92969da2a10c",
+                    "useTemplateDefault": false
+                  },
+                  "value": 6,
+                  "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue"
+                },
+                "settingInstanceTemplateReference": null
+              },
+              {
+                "settingDefinitionId": "device_vendor_msft_passportforwork_{tenantid}_policies_requiresecuritydevice",
+                "auditRuleInformation": null,
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "choiceSettingValue": {
+                  "value": "device_vendor_msft_passportforwork_{tenantid}_policies_requiresecuritydevice_true",
+                  "settingValueTemplateReference": null,
+                  "children": []
+                },
+                "settingInstanceTemplateReference": null
+              },
+              {
+                "settingDefinitionId": "device_vendor_msft_passportforwork_{tenantid}_policies_usecertificateforonpremauth",
+                "auditRuleInformation": null,
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "choiceSettingValue": {
+                  "value": "device_vendor_msft_passportforwork_{tenantid}_policies_usecertificateforonpremauth_false",
+                  "settingValueTemplateReference": null,
+                  "children": []
+                },
+                "settingInstanceTemplateReference": null
+              },
+              {
+                "settingDefinitionId": "device_vendor_msft_passportforwork_{tenantid}_policies_usepassportforwork",
+                "auditRuleInformation": null,
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "choiceSettingValue": {
+                  "value": "device_vendor_msft_passportforwork_{tenantid}_policies_usepassportforwork_true",
+                  "settingValueTemplateReference": null,
+                  "children": []
+                },
+                "settingInstanceTemplateReference": null
+              },
+              {
+                "settingDefinitionId": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_history",
+                "auditRuleInformation": null,
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+                "simpleSettingValue": {
+                  "settingValueTemplateReference": {
+                    "settingValueTemplateId": "55c0e424-1a3a-4990-a78b-de0eb8a92e0f",
+                    "useTemplateDefault": false
+                  },
+                  "value": 3,
+                  "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue"
+                },
+                "settingInstanceTemplateReference": null
+              },
+              {
+                "settingDefinitionId": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_expiration",
+                "auditRuleInformation": null,
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+                "simpleSettingValue": {
+                  "settingValueTemplateReference": {
+                    "settingValueTemplateId": "e5cd04dc-45b9-4b13-b962-33111525f447",
+                    "useTemplateDefault": false
+                  },
+                  "value": 365,
+                  "@odata.type": "#microsoft.graph.deviceManagementConfigurationIntegerSettingValue"
+                },
+                "settingInstanceTemplateReference": null
+              },
+              {
+                "settingDefinitionId": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_specialcharacters",
+                "auditRuleInformation": null,
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "choiceSettingValue": {
+                  "value": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_specialcharacters_2",
+                  "settingValueTemplateReference": null,
+                  "children": []
+                },
+                "settingInstanceTemplateReference": null
+              },
+              {
+                "settingDefinitionId": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_uppercaseletters",
+                "auditRuleInformation": null,
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "choiceSettingValue": {
+                  "value": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_uppercaseletters_2",
+                  "settingValueTemplateReference": null,
+                  "children": []
+                },
+                "settingInstanceTemplateReference": null
+              },
+              {
+                "settingDefinitionId": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_lowercaseletters",
+                "auditRuleInformation": null,
+                "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+                "choiceSettingValue": {
+                  "value": "device_vendor_msft_passportforwork_{tenantid}_policies_pincomplexity_lowercaseletters_2",
+                  "settingValueTemplateReference": null,
+                  "children": []
+                },
+                "settingInstanceTemplateReference": null
+              }
+            ]
+          }
+        ],
+        "settingInstanceTemplateReference": {
+          "settingInstanceTemplateId": "0ece2bdc-57c1-4be9-93e9-ac9c395a9c94"
+        }
+      }
+    }
+  ]
+}

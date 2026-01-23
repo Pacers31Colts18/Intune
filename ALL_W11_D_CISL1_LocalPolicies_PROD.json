@@ -1,0 +1,843 @@
+{
+  "name": "ALL_W11_D_CISL1_LocalPolicies_PROD",
+  "description": "CRQ000000221257. Logon banner settings removed.\n\nW11 Enterprise 22H2 CISL1 Benchmark v2.0\n\nSection 2: Local Policies",
+  "platforms": "windows10",
+  "technologies": "mdm",
+  "settings": [
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_accounts_blockmicrosoftaccounts",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_accounts_blockmicrosoftaccounts_3",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_accounts_enableguestaccountstatus",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_accounts_enableguestaccountstatus_0",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_accounts_limitlocalaccountuseofblankpasswordstoconsolelogononly",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_accounts_limitlocalaccountuseofblankpasswordstoconsolelogononly_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_accounts_renameadministratoraccount",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+        "simpleSettingValue": {
+          "value": "mnitadmin",
+          "settingValueTemplateReference": null,
+          "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_accounts_renameguestaccount",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+        "simpleSettingValue": {
+          "value": "mnitguest",
+          "settingValueTemplateReference": null,
+          "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_devices_allowedtoformatandejectremovablemedia",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+        "simpleSettingValue": {
+          "value": "2",
+          "settingValueTemplateReference": null,
+          "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_interactivelogon_smartcardremovalbehavior",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_interactivelogon_smartcardremovalbehavior_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_microsoftnetworkclient_digitallysigncommunicationsalways",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_microsoftnetworkclient_digitallysigncommunicationsalways_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_microsoftnetworkclient_digitallysigncommunicationsifserveragrees",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_microsoftnetworkclient_digitallysigncommunicationsifserveragrees_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_microsoftnetworkclient_sendunencryptedpasswordtothirdpartysmbservers",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_microsoftnetworkclient_sendunencryptedpasswordtothirdpartysmbservers_0",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_microsoftnetworkserver_digitallysigncommunicationsalways",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_microsoftnetworkserver_digitallysigncommunicationsalways_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_microsoftnetworkserver_digitallysigncommunicationsifclientagrees",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_microsoftnetworkserver_digitallysigncommunicationsifclientagrees_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_donotallowanonymousenumerationofsamaccounts",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_donotallowanonymousenumerationofsamaccounts_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_donotallowanonymousenumerationofsamaccountsandshares",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_donotallowanonymousenumerationofsamaccountsandshares_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_restrictanonymousaccesstonamedpipesandshares",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_restrictanonymousaccesstonamedpipesandshares_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networkaccess_restrictclientsallowedtomakeremotecallstosam",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance",
+        "simpleSettingValue": {
+          "value": "O:BAG:BAD:(A;;RC;;;BA)",
+          "settingValueTemplateReference": null,
+          "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networksecurity_allowlocalsystemtousecomputeridentityforntlm",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networksecurity_allowlocalsystemtousecomputeridentityforntlm_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networksecurity_allowpku2uauthenticationrequests",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networksecurity_allowpku2uauthenticationrequests_0",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networksecurity_donotstorelanmanagerhashvalueonnextpasswordchange",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networksecurity_donotstorelanmanagerhashvalueonnextpasswordchange_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networksecurity_lanmanagerauthenticationlevel",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networksecurity_lanmanagerauthenticationlevel_5",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networksecurity_minimumsessionsecurityforntlmsspbasedclients",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networksecurity_minimumsessionsecurityforntlmsspbasedclients_537395200",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networksecurity_minimumsessionsecurityforntlmsspbasedservers",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_networksecurity_minimumsessionsecurityforntlmsspbasedservers_537395200",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_behavioroftheelevationpromptforadministrators",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_behavioroftheelevationpromptforadministrators_2",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_behavioroftheelevationpromptforstandardusers",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_behavioroftheelevationpromptforstandardusers_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_detectapplicationinstallationsandpromptforelevation",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_detectapplicationinstallationsandpromptforelevation_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_onlyelevateuiaccessapplicationsthatareinstalledinsecurelocations",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_onlyelevateuiaccessapplicationsthatareinstalledinsecurelocations_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_runalladministratorsinadminapprovalmode",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_runalladministratorsinadminapprovalmode_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_switchtothesecuredesktopwhenpromptingforelevation",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_switchtothesecuredesktopwhenpromptingforelevation_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_useadminapprovalmode",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_useadminapprovalmode_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_virtualizefileandregistrywritefailurestoperuserlocations",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_localpoliciessecurityoptions_useraccountcontrol_virtualizefileandregistrywritefailurestoperuserlocations_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_accesscredentialmanagerastrustedcaller",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "(<![CDATA[]]>)",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_actaspartoftheoperatingsystem",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "(<![CDATA[]]>)",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_allowlocallogon",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          },
+          {
+            "value": "Users",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_backupfilesanddirectories",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_changesystemtime",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          },
+          {
+            "value": "LOCAL SERVICE",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          },
+          {
+            "value": "",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_createglobalobjects",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          },
+          {
+            "value": "LOCAL SERVICE",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          },
+          {
+            "value": "NETWORK SERVICE",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          },
+          {
+            "value": "SERVICE",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_createpagefile",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_createpermanentsharedobjects",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "(<![CDATA[]]>)",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_createsymboliclinks",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_createtoken",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "(<![CDATA[]]>)",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_debugprograms",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_denylocallogon",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Guests",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_enabledelegation",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "(<![CDATA[]]>)",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_generatesecurityaudits",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "LOCAL SERVICE",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          },
+          {
+            "value": "NETWORK SERVICE",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_impersonateclient",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          },
+          {
+            "value": "LOCAL SERVICE",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          },
+          {
+            "value": "NETWORK SERVICE",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          },
+          {
+            "value": "SERVICE",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_increaseschedulingpriority",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          },
+          {
+            "value": "Window Manager\\Window Manager Group",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_loadunloaddevicedrivers",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_lockmemory",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "(<![CDATA[]]>)",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_manageauditingandsecuritylog",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_managevolume",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_modifyfirmwareenvironment",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_modifyobjectlabel",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "(<![CDATA[]]>)",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_profilesingleprocess",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_remoteshutdown",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_restorefilesanddirectories",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    },
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_userrights_takeownership",
+        "auditRuleInformation": null,
+        "simpleSettingCollectionValue": [
+          {
+            "value": "Administrators",
+            "settingValueTemplateReference": null,
+            "@odata.type": "#microsoft.graph.deviceManagementConfigurationStringSettingValue"
+          }
+        ],
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance",
+        "settingInstanceTemplateReference": null
+      }
+    }
+  ]
+}
