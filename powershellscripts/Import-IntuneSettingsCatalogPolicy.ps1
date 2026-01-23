@@ -18,9 +18,6 @@ Function Import-IntuneSettingsCatalogPolicy {
 
     #Declarations
     $date = Get-Date -Format yyyyMMdd-HHmm
-    $resultsfile = "$OutputDir\Import-g46IntuneDeviceConfigurationPolicy-$date.csv"
-    $logfile = "$Outputdir\Import-g46IntuneDeviceConfigurationPolicy-$date.log"
-
     # Start transcript logging
     Start-Transcript -Path $logfile -Append -Force
 
