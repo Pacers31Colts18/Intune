@@ -1,0 +1,21 @@
+{
+  "name": "ALL_WIN_D_OSConfig_WindowsHelloForBusiness-SecurityKey_PROD",
+  "description": "2/20/25 - Removed previous configuration except for security key sign-in. Used for Yubikey configuration for Commissioner Tomes. - JL\n\nCRQ000000226625. Marked ToBeDeleted and removed assignment.",
+  "platforms": "windows10",
+  "technologies": "mdm",
+  "settings": [
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_passportforwork_securitykey_usesecuritykeyforsignin",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_passportforwork_securitykey_usesecuritykeyforsignin_1",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    }
+  ]
+}

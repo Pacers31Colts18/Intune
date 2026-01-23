@@ -1,0 +1,21 @@
+{
+  "name": "ALL_W11_D_CISL1_CompAdministrativeTemplates_ConveniencePINSignIn_PROD",
+  "description": "(L1) Ensure 'Turn on convenience PIN sign-in' is set to 'Disabled'\n",
+  "platforms": "windows10",
+  "technologies": "mdm",
+  "settings": [
+    {
+      "settingInstance": {
+        "settingDefinitionId": "device_vendor_msft_policy_config_credentialproviders_allowpinlogon",
+        "auditRuleInformation": null,
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "choiceSettingValue": {
+          "value": "device_vendor_msft_policy_config_credentialproviders_allowpinlogon_0",
+          "settingValueTemplateReference": null,
+          "children": []
+        },
+        "settingInstanceTemplateReference": null
+      }
+    }
+  ]
+}
