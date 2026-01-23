@@ -1,45 +1,28 @@
-Function Import-IntuneSettingsCatalogPolicy {
-    <#
-    .SYNOPSIS
-    Import .JSON of a settings catalog policy to Intune.
-    .DESCRIPTION
-    Import .JSON of a settings catalog policy to Intune. No assignments will be created.
-    .EXAMPLE
-    Import-g46IntuneDeviceConfigurationPolicy
-    .NOTES
-    https://github.com/microsoftgraph/powershell-intune-samples/blob/master/SettingsCatalog/SettingsCatalog_Import_FromJSON.ps1
-    #>
+[CmdletBinding()]
+param
+(
+    [parameter(Mandatory)]
+    [ValidateNotNullOrEmpty()]
+    [string]$folder
+)
 
-    #Microsoft Graph Connection check
-    if ($null -eq (Get-MgContext)) {
-        Write-Error "Authentication needed. Please call Connect-g46GraphAppDelegated."
-        Break
+
+$policyfiles = Get-ChildItem $folder | Select-Object Name, BaseName
+
+Foreach ($policyfile in $policyfiles){
+    $policyName = $policyfile.Name
+    $policybaseName = $policyfile.BaseName
+
+        $policy = Get-Content -path $folder\$policyName
+        $policyCheck = (Invoke-Mggraphrequest -uri "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies?`$filter=Name eq '$policyBaseName'" -Method GET).value
+        
+        if ($policyCheck.Name){
+        Write-Host "$($policyCheck.Name) already exists, modifying profile with PUT"
+        $put = Invoke-Mggraphrequest -Uri "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies/$($policyCheck.Id)" -Method PUT -Body $policy -ContentType "application/json"
+        }
+        else{
+            Write-Host "$policybaseName does not exist, creating new profile"
+            $post = Invoke-Mggraphrequest -Uri "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies" -Method POST -Body $policy -ContentType "application/json"
     }
-
-    #Declarations
-    $date = Get-Date -Format yyyyMMdd-HHmm
-    # Start transcript logging
-    Start-Transcript -Path $logfile -Append -Force
-
-    $ImportPath = Get-ImportPath
-    $JSON_Data = gc "$ImportPath"
-
-    # Excluding entries that are not required - id,createdDateTime,lastModifiedDateTime,version
-    $JSON_Convert = $JSON_Data | ConvertFrom-Json | Select-Object -Property * -ExcludeProperty id, createdDateTime, lastModifiedDateTime, version, supportsScopeTags
-
-    $DisplayName = $JSON_Convert.name
-
-    $JSON_Output = $JSON_Convert | ConvertTo-Json -Depth 20
-            
-    write-host
-    write-host "Settings Catalog Policy '$DisplayName' Found..." -ForegroundColor Yellow
-    write-host
-    $JSON_Output
-    write-host
-    Write-Host "Adding Settings Catalog Policy '$DisplayName'" -ForegroundColor Yellow
-    New-MgBetaDeviceManagementConfigurationPolicy -Body $JSON_Output
-
-    #Stop transcript
-    Stop-Transcript
-
 }
+
