@@ -3,18 +3,16 @@ function Export-IntuneGroupAssignmentsForAdministrativeUnit {
 .SYNOPSIS
 Exports all Intune policy assignments for groups within a specified Administrative Unit (AU).
 .DESCRIPTION
-This function queries Microsoft Graph to retrieve all groups assigned to a given 
-Administrative Unit (AU), then enumerates all major Intune policy types to determine 
-which policies are assigned to those groups.
+This function queries Microsoft Graph to retrieve all groups assigned to a given AU and then search through Intune policies to determine assignments.
 .PARAMETER AdministrativeUnit
-The display name of the Administrative Unit to query. This must match exactly.
+The display name of the Administrative Unit to query.
 .PARAMETER Scope
 Controls which groups are included in the output.
 - All         : Include all groups in the AU
 - Assigned    : Only include groups with at least one Intune assignment
 - Unassigned  : Only include groups with no Intune assignments
 .EXAMPLE
-Export-IntuneGroupAssignmentsForAdministrativeUnit -AdministrativeUnit "West Coast" -Scope All
+Export-IntuneGroupAssignmentsForAdministrativeUnit -AdministrativeUnit "JoeLoveless - AU - Intune Groups" -Scope All
 .OUTPUTS
 CSV file written to the current directory unless $OutputDir is set.
 #>
@@ -29,7 +27,7 @@ CSV file written to the current directory unless $OutputDir is set.
 
     # Microsoft Graph Connection check
     if (-not (Get-MgContext)) {
-        Write-Error "Authentication needed. Please call Connect-g46GraphAppDelegated."
+        Write-Error "Authentication needed. Please connect to Graph."
         return
     }
 
@@ -56,17 +54,20 @@ CSV file written to the current directory unless $OutputDir is set.
     )
 
     #region Get AU
-    $au = Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/$graphApiVersion/directory/administrativeUnits?`$filter=displayName eq '$AdministrativeUnit'"
-    if (-not $au.value) {
+    $uri = "https://graph.microsoft.com/$graphApiVersion/directory/administrativeUnits?`$filter=displayName eq '$AdministrativeUnit'"
+    $au = (Invoke-MgGraphRequest -Method GET -Uri $uri).value
+    if ($au) {
+        Write-Output "Administrative Unit: $($au.displayName) found."
+    }
+    if (-not $au) {
         Write-Error "Administrative Unit '$AdministrativeUnit' not found."
         return
     }
-    $auId = $au.value[0].id
     #endregion
 
     #region Get Groups in AU
     $groups = @()
-    $uri = "https://graph.microsoft.com/$graphApiVersion/directory/administrativeUnits/$auId/members"
+    $uri = "https://graph.microsoft.com/$graphApiVersion/directory/administrativeUnits/$($au.id)/members"
     do {
         $response = Invoke-MgGraphRequest -Method GET -Uri $Uri
 
@@ -81,6 +82,10 @@ CSV file written to the current directory unless $OutputDir is set.
     } while ($Uri)
 
     $groups = $groups | Where-Object { $_.'@odata.type' -eq '#microsoft.graph.group' }
+
+    if ($groups) {
+        Write-Output "Found $($groups.Count) groups in Administrative Unit."
+    }
 
     if (-not $groups) {
         Write-Warning "No groups found in Administrative Unit."
@@ -125,7 +130,6 @@ CSV file written to the current directory unless $OutputDir is set.
         foreach ($obj in $objects) {
             $name = $obj.displayName
             if (-not $name) { $name = $obj.name }
-            if (-not $name) { $name = $obj.description }
             if (-not $name) { $name = "" }
 
             $obj | Add-Member -NotePropertyName NormalizedName -NotePropertyValue $name -Force
@@ -174,10 +178,25 @@ CSV file written to the current directory unless $OutputDir is set.
                 if (-not $assignments) { continue }
 
                 foreach ($assignment in $assignments) {
+                    #Include Assignments
                     if ($assignment.target.'@odata.type' -eq '#microsoft.graph.groupAssignmentTarget') {
                         $gid = $assignment.target.groupId
                         if ($gid -and $groupMap.ContainsKey($gid)) {
                             $groupMap[$gid].Assigned = $true
+                            $groupMap[$gid].AssignmentType = "Include"
+                            $groupMap[$gid].Items += [pscustomobject]@{
+                                PolicyType = $resource.Name
+                                PolicyId   = $obj.id
+                                PolicyName = $obj.NormalizedName
+                            }
+                        }
+                    }
+                    #Exclude Assignments
+                    if ($assignment.target.'@odata.type' -eq '#microsoft.graph.exclusionGroupAssignmentTarget') {
+                        $gid = $assignment.target.groupId
+                        if ($gid -and $groupMap.ContainsKey($gid)) {
+                            $groupMap[$gid].Assigned = $true
+                            $groupMap[$gid].AssignmentType = "Exclude"
                             $groupMap[$gid].Items += [pscustomobject]@{
                                 PolicyType = $resource.Name
                                 PolicyId   = $obj.id
@@ -192,28 +211,28 @@ CSV file written to the current directory unless $OutputDir is set.
 
     # Build results
     foreach ($g in $groupMap.Values) {
-        if (
-            $Scope -eq 'All' -or
-            ($Scope -eq 'Assigned' -and $g.Assigned) -or
-            ($Scope -eq 'Unassigned' -and -not $g.Assigned)
-        ) {
+        if ( $Scope -eq 'All' -or ($Scope -eq 'Assigned' -and $g.Assigned) -or ($Scope -eq 'Unassigned' -and -not $g.Assigned)) {
+            #Assigned groups
             if ($g.Items.Count -gt 0) {
                 foreach ($item in $g.Items) {
                     $results += [pscustomobject]@{
-                        GroupId    = $g.GroupId
-                        GroupName  = $g.GroupName
-                        Assigned   = $true
-                        PolicyType = $item.PolicyType
-                        PolicyId   = $item.PolicyId
-                        PolicyName = $item.PolicyName
+                        GroupId        = $g.GroupId
+                        GroupName      = $g.GroupName
+                        Assigned       = $true
+                        AssignmentType = $g.AssignmentType
+                        PolicyType     = $item.PolicyType
+                        PolicyId       = $item.PolicyId
+                        PolicyName     = $item.PolicyName
                     }
                 }
             }
             else {
+                #Unassigned groups
                 $results += [pscustomobject]@{
                     GroupId    = $g.GroupId
                     GroupName  = $g.GroupName
                     Assigned   = $false
+                    AssignmentType = ''
                     PolicyType = ''
                     PolicyId   = ''
                     PolicyName = ''
