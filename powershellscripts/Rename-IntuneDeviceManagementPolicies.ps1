@@ -29,7 +29,7 @@ function Rename-IntuneDeviceManagementPolicies {
 
     #Microsoft Graph Connection check
     if ($null -eq (Get-MgContext)) {
-        Connect-g46GraphAppDelegated
+        "Not authenticated to Graph, please connect"
         return
     }
 
